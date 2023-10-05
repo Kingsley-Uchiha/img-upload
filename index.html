@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Upload Images</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <style>
+    * {
+      font-family: "Poppins";
+    }
+    img {
+      max-width: 100%;
+      position: relative;
+      margin-top: 20px;
+      min-width: 250px;
+      min-height: 100px;
+    }
+    img::before {
+      position: absolute;
+      content: attr(alt);
+      background-color: #eee;
+      inset: 0;
+      text-align: center;
+      padding: 2em 0;
+      border: 2px solid #333;
+      font-weight: 600;
+      background-image: url("./img/img.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    input[type=file] {
+      font-size: 1em;
+    }
+    input[type=file]::-webkit-file-upload-button {
+      padding: .5em 20px;
+      cursor: pointer;
+      background-color: #eee;
+      border: 1px solid #333;
+      margin-right: 20px;
+      font-family: "Poppins";
+    }
+  </style>
+</head>
+<body>
+  <form id="form">
+    <!-- <input type="image" src="./img/Asset 62@4x-8.png" alt="TS"> -->
+    <input type="file" name="image" id="image" accept="image/png, image/jpeg, image/jpg">
+    <br>
+    <img src="/" alt="Select an image">
+  </form>
+
+  <script src="./dist/app.js"></script>
+</body>
+</html>
